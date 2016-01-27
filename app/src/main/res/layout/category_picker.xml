@@ -24,11 +24,11 @@
 
     </RelativeLayout>
 
-    <RelativeLayout
+    <com.chord.topnews.widget.CategoriesContainer
         android:id="@+id/categories_container"
         android:layout_width="match_parent"
         android:layout_height="200dp">
 
-    </RelativeLayout>
+    </com.chord.topnews.widget.CategoriesContainer>
 
 </LinearLayout>
