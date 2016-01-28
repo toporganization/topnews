@@ -1,14 +1,14 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context=".NewsActivity$PlaceholderFragment">
 
     <LinearLayout
+        android:id="@+id/title_bar"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="#FFFF00FF"
+        android:background="#FFFF0000"
         android:gravity="center_vertical">
 
         <HorizontalScrollView
@@ -34,6 +34,58 @@
     <android.support.v4.view.ViewPager
         android:id="@+id/view_pager"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:layout_below="@id/title_bar" />
 
-</LinearLayout>
+    <LinearLayout
+        android:id="@+id/category_picker_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="true"
+        android:touchscreenBlocksFocus="true"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#FFFF0000"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="Set My Categories"
+                android:textColor="#FFFFFFFF"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/btn_done"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="Done"
+                android:textColor="#FFFFFFFF"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <com.chord.topnews.widget.CategoriesContainer
+            android:id="@+id/categories_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFF0000"/>
+
+        <View
+            android:id="@+id/transparent_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#AA000000" />
+
+    </LinearLayout>
+
+</RelativeLayout>

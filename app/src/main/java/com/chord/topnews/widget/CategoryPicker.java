@@ -24,7 +24,7 @@ public class CategoryPicker extends PopupWindow {
         View contentView = inflater.inflate(R.layout.category_picker, null);
         setContentView(contentView);
         setWidth(LayoutParams.MATCH_PARENT);
-        setHeight(LayoutParams.WRAP_CONTENT);
+        setHeight(LayoutParams.MATCH_PARENT);
         setOutsideTouchable(true);
 
         mCategoriesContainer = (CategoriesContainer) contentView.findViewById(R.id.categories_container);

@@ -12,6 +12,8 @@ import android.widget.TextView;
  */
 public class NewsAdapter extends BaseAdapter {
 
+    private static final String TAG = "NewsAdapter";
+
     private Context mContext;
 
     public NewsAdapter(Context context) {

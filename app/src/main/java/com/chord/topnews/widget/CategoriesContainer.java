@@ -26,20 +26,40 @@ public class CategoriesContainer extends ViewGroup implements CategoryItem.OnPic
 
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
-        super.onMeasure(widthMeasureSpec, heightMeasureSpec);
+        final int specWidth = resolveSize(0, widthMeasureSpec);
+        LogUtils.d(TAG, "specWidth = " + specWidth);
+
+        int width = PADDING;
+        int height = PADDING;
+        int lastWidth = PADDING;
 
         for (int i = 0; i < getChildCount(); i++) {
-            getChildAt(i).measure(MeasureSpec.UNSPECIFIED, MeasureSpec.UNSPECIFIED);
+            View child = getChildAt(i);
+            child.measure(MeasureSpec.UNSPECIFIED, MeasureSpec.UNSPECIFIED);
+            int childWidth = child.getMeasuredWidth();
+            int childHeight = child.getMeasuredHeight();
+            width += childWidth + PADDING;
+
+            LogUtils.d(TAG, "lastWidth = " + lastWidth + ", width = " + width);
+            if (height == PADDING) {
+                height += childHeight + PADDING;
+            } else if (width > specWidth) {
+                width = lastWidth = PADDING + childWidth + PADDING;
+                height += childHeight + PADDING;
+            }
+            LogUtils.d(TAG, "height = " + height);
         }
+
+        setMeasuredDimension(specWidth, height);
     }
 
     @Override
     protected void onLayout(boolean changed, int l, int t, int r, int b) {
         LogUtils.d(TAG, "onLayout: width = " + getWidth() + ", height = " + getHeight());
-        LogUtils.d(TAG, "onLayout: changed = " + changed + ", l = " + l + ", r = " + r);
+        LogUtils.d(TAG, "onLayout: changed = " + changed + ", l = " + l + ", t = " + t + ", r = " + r + ", b = " + b);
 
-        int viewLeft = l + PADDING;
-        int viewTop = t + PADDING;
+        int viewLeft = PADDING;
+        int viewTop = PADDING;
         int viewRight = viewLeft;
         int viewBottom = viewTop;
         int viewWidth = 0;
