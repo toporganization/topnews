@@ -4,4 +4,20 @@
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="appbar_padding_top">8dp</dimen>
+
+    <dimen name="headline_news_height">200dp</dimen>
+    <dimen name="picture_news_height">120dp</dimen>
+    <dimen name="picture_news_padding_left">8dp</dimen>
+    <dimen name="picture_news_padding_right">7dp</dimen>
+    <dimen name="picture_news_padding_top">10dp</dimen>
+    <dimen name="picture_news_padding_bottom">10dp</dimen>
+    <dimen name="picture_news_picture_width">105dp</dimen>
+    <dimen name="picture_news_picture_height">80dp</dimen>
+    <dimen name="picture_news_picture_margin_top">20dp</dimen>
+    <dimen name="picture_news_picture_margin">15dp</dimen>
+    <dimen name="general_news_picture_margin_left">15dp</dimen>
+
+    <dimen name="comment_avatar_size">25dp</dimen>
+    <dimen name="comment_layout_padding_vertical">15dp</dimen>
+    <dimen name="comment_body_width">300dp</dimen>
 </resources>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/picture_news_height"
+    android:paddingBottom="@dimen/picture_news_padding_bottom"
+    android:paddingLeft="@dimen/picture_news_padding_left"
+    android:paddingRight="@dimen/picture_news_padding_right"
+    android:paddingTop="@dimen/picture_news_padding_top">
+
+    <ImageView
+        android:id="@+id/img_picture"
+        android:layout_width="@dimen/picture_news_picture_width"
+        android:layout_height="@dimen/picture_news_picture_height"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="@dimen/general_news_picture_margin_left" />
+
+    <TextView
+        android:id="@+id/text_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@id/img_picture"
+        android:ellipsize="end"
+        android:textColor="#FF333333" />
+
+    <TextView
+        android:id="@+id/text_summary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_title"
+        android:layout_toLeftOf="@id/img_picture"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:textColor="#FF666666" />
+
+    <TextView
+        android:id="@+id/text_comment_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_summary"
+        android:layout_toLeftOf="@id/img_picture"
+        android:textColor="#FF666666" />
+
+</RelativeLayout>

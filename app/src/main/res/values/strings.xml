@@ -6,4 +6,6 @@
     <string name="news">News</string>
     <string name="stories">Stories</string>
     <string name="me">Me</string>
+
+    <string name="comment_count_format">%1$d comments</string>
 </resources>

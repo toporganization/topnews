@@ -7,6 +7,8 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentTabHost;
 import android.view.LayoutInflater;
 
+import com.chord.topnews.utils.LogUtils;
+
 /**
  * Created by AllanCL on 2016/1/25.
  */

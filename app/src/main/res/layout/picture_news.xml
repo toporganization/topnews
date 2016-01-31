@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/picture_news_height"
+    android:paddingLeft="@dimen/picture_news_padding_left"
+    android:paddingRight="@dimen/picture_news_padding_right"
+    android:paddingTop="@dimen/picture_news_padding_top"
+    android:paddingBottom="@dimen/picture_news_padding_bottom">
+
+    <TextView
+        android:id="@+id/text_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:textColor="#FF333333" />
+
+    <TextView
+        android:id="@+id/text_comment_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:textColor="#FF666666" />
+
+    <ImageView
+        android:id="@+id/img_picture"
+        android:layout_width="@dimen/picture_news_picture_width"
+        android:layout_height="@dimen/picture_news_picture_height"
+        android:layout_marginTop="@dimen/picture_news_picture_margin_top" />
+
+    <ImageView
+        android:id="@+id/img_picture_2"
+        android:layout_width="@dimen/picture_news_picture_width"
+        android:layout_height="@dimen/picture_news_picture_height"
+        android:layout_marginLeft="@dimen/picture_news_picture_margin"
+        android:layout_marginRight="@dimen/picture_news_picture_margin"
+        android:layout_marginTop="@dimen/picture_news_picture_margin_top"
+        android:layout_toRightOf="@id/img_picture" />
+
+    <ImageView
+        android:id="@+id/img_picture_3"
+        android:layout_width="@dimen/picture_news_picture_width"
+        android:layout_height="@dimen/picture_news_picture_height"
+        android:layout_marginTop="@dimen/picture_news_picture_margin_top"
+        android:layout_toRightOf="@id/img_picture_2" />
+
+</RelativeLayout>
